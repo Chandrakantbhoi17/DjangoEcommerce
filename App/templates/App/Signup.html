@@ -1,0 +1,80 @@
+{% extends 'App/login.html' %}
+{% load static %}
+{% block tittle %}SignUp  |  DjangoEcommerce{% endblock tittle %}
+
+{% block ResorSignUp %}
+{% if messages %}
+{% for msg in messages %}
+<p class="alert alert-danger py-1 my-1 fw-900">{{msg}}</p>
+{% endfor %}
+{% endif %}
+ <p id="non-error">{{form.non_field_errors|striptags}}</p>
+ 
+                    {% for fm  in form %}
+                    <label class="text-light fw-bold">{{fm.label}}</label>
+                    {{fm}}
+                    <p id="validateerror"></p>
+                   
+                    <p id="error">{{fm.errors|striptags}}</p>
+                  
+                    {% endfor %}
+                    <div class="d-flex justify-content-between"><a href="{% url 'signin' %}" class="Already-Account">Already have an Account? Signin</a></div>
+                    
+                    <input type="submit" value="SignUp" class="py-1 py-1 my-2 fw-bold btn btn-primary px-4">
+
+{% endblock ResorSignUp %}
+
+
+{% block CustomScript %}
+<script>
+    function validateEmail(mail){
+         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+   
+    if (mail.match(mailformat)) {
+      document.getElementById('validateerror').innerText = "";
+      document.getElementById('Submitbtn').disabled = false;
+
+      return (true)
+    }
+    document.getElementById('validateerror').innerText = "You have entered an invalid email address!"
+    document.getElementById('Submitbtn').disabled = true;
+
+    return (false)
+  }
+
+  
+function validate(){
+        CheckNumberOrEmail()
+}
+ function PhoneNumber(inputtxt) {
+    var phoneno = /^\d{10}$/;
+    if ((inputtxt.match(phoneno))) {
+      document.getElementById('validateerror').innerText = "";
+      document.getElementById('Submitbtn').disabled = false;
+      return true;
+    }
+    else {
+      document.getElementById('validateerror').innerText = "enter 10 digit number";
+      document.getElementById('Submitbtn').disabled = true;
+
+      return false;
+    }
+  }
+function CheckNumberOrEmail(){
+        var data=document.getElementById('id_username').value;
+        if (isNaN(data)){
+            validateEmail(data);
+        }
+        else{
+            PhoneNumber(data);
+           
+        
+        }
+
+
+    }
+
+    
+  
+</script>
+{% endblock CustomScript %}

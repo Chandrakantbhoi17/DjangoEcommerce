@@ -1,0 +1,24 @@
+{% extends 'App/login.html' %}
+
+{% block ResorSignUp  %}
+
+
+
+{% if messages %}
+{% for msg in messages  %}
+<div class="text-danger fw-600">{{msg}}</div>
+{% endfor %}
+{% endif %}
+<p class="text-light my-1">We have Sent a Otp To Your Corresponding Email <br>Please Check Your Email</p>
+
+<form action="" method="POST" >
+    {% csrf_token %}
+    <input type="text"  name="Otp" id="Otp" class="form-control" onchane="My()">
+    <input type="submit" value="Send" class="btn-primary btn outline-none px-3 py-1 my-1">
+
+</form>
+ 
+
+
+
+{% endblock ResorSignUp %}

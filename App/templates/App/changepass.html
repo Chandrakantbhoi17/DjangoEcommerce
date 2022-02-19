@@ -1,0 +1,20 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+{% block CustomLink %}
+<link rel="stylesheet" href="{% static 'App/css/changepass.css' %}">
+{% endblock CustomLink %}
+{% block mainbody %}
+<div class="maindiv" >
+    <form action="" method="POST" novalidate>
+{% csrf_token %}
+{% for fm in form %}
+
+{{fm}}
+{{fm.error}}
+{% endfor %}
+<input type="submit" value="Submit">
+
+</form>
+</div>
+{% endblock mainbody %}

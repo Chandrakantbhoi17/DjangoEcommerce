@@ -1,0 +1,11 @@
+
+.carousel-item{
+    height: 400px;
+    position: relative;
+}
+@media(max-width:765px){
+   .carousel-item{
+       height: 100px;
+   }
+
+}

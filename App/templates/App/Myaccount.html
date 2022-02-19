@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myaccount</title>
+    <link rel="stylesheet" href="{% static 'App/css/Myaccount.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+    <link rel="stylesheet" href="{% static 'app/css/Myaccount.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+   
+</head>
+<body>
+    <nav class=" text-danger container-fluid py-2 px-4 Mynav d-flex flex-wrap justify-content-around align-items-center">
+        <a href="/" class="Heading"><span class="Major-text">D</span>jango<span class="Major-text">E</span>commerce</a>
+         <a href="/" class="me-4 col-lg-5 back-to-home text-end" >
+           <span  id="Go-home">Go Back To Home</span>
+           <i class="fas fa-arrow-right "></i>
+
+       </a>
+
+
+        
+
+    </nav>
+ {% block mainbody %}
+     <div class="container   mt-3" id="Account">
+        <div class="  d-flex Account  align-items-center mt-1">
+            <div class="account-items" id="account-items">
+               <div class="Profile-pic" id="Account-profile">
+                   <img src="{{request.user.userdetail.photo.url}}" alt="">
+
+
+               </div>
+            </div>
+            <div class="account-username">
+                {% if request.user.is_authenticated %}
+                {{request.user}}
+                {% else %}
+                <a href="{% url 'signup' %}" class="py-1 px-3">Sign /Join </a>
+                {% endif %}
+               
+            </div>
+         
+        </div>
+        <a href="" class="d-flex justify-content-between px-3 py-2 account-item">
+            <p>Invite friends</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+         <a href="" class="d-flex justify-content-between px-3 py-2 account-item">
+            <p>Customer Care</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+         <a href="" class="d-flex justify-content-between px-3 py-2 account-item">
+            <p>Track Your Order</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+         <a href="" class="d-flex justify-content-between px-3 py-2 account-item">
+            <p>How Do i Redeem My Coupon</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="" class="d-flex justify-content-between py-2 px-3 account-item">
+            <p>Who We Are</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="" class="d-flex justify-content-between py-2 px-3 account-item">
+            <p>We Respect Your Privacy</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="" class="d-flex justify-content-between py-2 px-3 account-item">
+            <p>We Respect Your Privacy</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+        <a href="" class="d-flex justify-content-between py-2 px-3 account-item">
+            <p>Terms & Condition</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+         <a href="" class="d-flex justify-content-between py-2 px-3 account-item">
+            <p>Join Our Team</p>
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+
+        
+            
+            
+
+      
+        
+
+        
+       
+       
+        
+
+    </div>
+    
+    
+
+
+
+ {% endblock mainbody %}
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+
+<script>
+    var change_photo=document.getElementById('change_photo');
+
+   
+ 
+</script>
+    
+    
+
+    
+</body>
+</html>

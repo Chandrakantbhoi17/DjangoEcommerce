@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Prompt:ital,wght@0,500;0,600;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box !important;
+
+
+}
+.fa-bars{
+    cursor: pointer;
+}
+.fa-times{
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+p{
+    margin-bottom: 0 !important;
+}
+a{
+    text-decoration: none;
+    
+}
+body,html{
+    height: 100%;
+    overflow-x: hidden;
+    background: #d1ccc0;
+    
+}
+.navbar{
+    height: fit-content;
+    background: #0c2461;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    z-index: 100;
+}
+
+.navbar .search-field .Logo-d,.navbar .search-field .Logo-e{
+    color: #e84393;
+}
+
+
+.navbar .search-field .Logo-d,.navbar .search-field a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.top-nav .fa-shopping-bag{
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.top-nav .Top-Account  .Top-username{
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    
+}
+
+.top-nav .Top-Account{
+    width: fit-content;
+    
+}
+ .top-nav .Top-Account  .Top-profile{
+     width: 30px;
+     height: 30px;
+     overflow: hidden;
+     border-radius: 50%;
+     position: relative;
+ }
+ .top-nav .Top-Account  .Top-profile img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+
+ }
+ 
+
+.bottom-nav{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px 5px;
+}
+.bottom-nav a{
+    text-decoration: none;
+}
+.bottom-nav a i{
+    font-size: 18px;
+    color: #000;
+}
+.bottom-nav a p{
+    font-size: 14px;
+    margin: 0 !important;
+    color: #000;
+}
+.navbar div #Top-Login-link,
+.navbar div #Top-Resister-link
+{
+    padding: 3px 10px;
+
+
+    border-right: 3px solid #e84393;
+}  
+.top-nav  .Top-menu  #slidemenu{
+   
+    position: fixed !important;
+    top: 0;
+    width: 400px;
+    margin-top: 85px !important;
+    overflow-y: scroll;
+    height: 100vh;
+    left: -100%;
+    background: #e84393 ;
+    transition: 0.5s;
+    
+}
+.search-field input::placeholder{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Concert One', cursive;
+font-family: 'Prompt', sans-serif;
+}
+
+.top-nav  .Top-menu  #slidemenu  .Mydropdown-cat{
+    color: #0c2461;
+    font-weight: 700;
+    font-size: 18px;
+}
+.top-nav  .Top-menu  #slidemenu .Mydropdown-sub{
+    color: #0c2461;
+    font-size: 14px;
+    font-weight: 800;
+
+}
+
+
+
+
+
+
+    
+
+@media (max-width:765px){
+    .navbar .Top-menu .top-d,
+    .navbar .Top-menu .top-e
+    {
+        color: #e84393;
+    }
+    .navbar .Top-menu a{
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    .top-nav  .Top-menu  #slidemenu{
+        width: 100%;
+    }
+    .top-nav  .Top-menu  #slidemenu  .Mydropdown-cat{
+ 
+    font-size: 14px;
+}
+.top-nav  .Top-menu  #slidemenu .Mydropdown-sub{
+    font-size: 12px;
+}
+.navbar .search-field .Logo-d,.navbar .search-field input{
+    padding: 2px 0;
+}
+.search-field input::placeholder{
+    font-size: 13px;
+}
+}
+
+
